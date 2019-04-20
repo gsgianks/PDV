@@ -11,6 +11,7 @@ namespace Servicios.DataAccess
             User = new UserRepository(connectionString);
             Supplier = new SupplierRepository(connectionString);
             Order = new OrderRepository(connectionString);
+            Producto = new ProductosRepository(connectionString);
         }
         public ICustomerRepository Customer { get; private set; }
         public IUserRepository User { get; private set; }

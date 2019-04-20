@@ -42,10 +42,10 @@ namespace Servicios.WebApi
             /*fin pruebas*/
 
             //Inyección de dependencias de capa de lógica.
+            services.AddTransient<IProductosLogic, ProductosLogic>();
             services.AddTransient<ISupplierLogic, SupplierLogic>();
             services.AddTransient<IOrderLogic, OrderLogic>();
             services.AddTransient<ICustomerLogic, CustomerLogic>();
-            services.AddTransient<IProductosLogic, ProductosLogic>();
             services.AddTransient<ITokenLogic, TokenLogic>();
 
 
