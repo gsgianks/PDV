@@ -3,6 +3,7 @@ using Servicios.Models;
 using Servicios.Repositories;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Linq;
 
 namespace Servicios.DataAccess
 {
@@ -25,6 +26,25 @@ namespace Servicios.DataAccess
                 return connection.Query<Inv_Productos>("dbo.ProductosListaPaginada",
                                                     parameters,
                                                     commandType: System.Data.CommandType.StoredProcedure);
+            }
+        }
+
+        /// <summary>
+        /// Método que obtiene un producto por código de barra
+        /// </summary>
+        /// <param name="barCode"></param>
+        /// <returns></returns>
+        public Inv_Productos GetProductByBarCode(string barCode)
+        {
+            var parameters = new DynamicParameters();
+            parameters.Add("@CodigoBarra", barCode);
+
+            using (var connection = new SqlConnection(_connectionString))
+            {
+                var resp = connection.Query<Inv_Productos>("dbo.sp_ObtenerProductoPorCodBarra",
+                                                    parameters,
+                                                    commandType: System.Data.CommandType.StoredProcedure);
+                return resp.FirstOrDefault();
             }
         }
     }

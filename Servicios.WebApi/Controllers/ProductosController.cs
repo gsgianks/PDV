@@ -32,6 +32,7 @@ namespace Servicios.WebApi.Controllers
         }
 
         [HttpPost]
+        [Route("Agregar")]
         public IActionResult Post([FromBody] Inv_Productos producto)
         {
             if (!ModelState.IsValid) return BadRequest();
