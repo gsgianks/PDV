@@ -1,0 +1,30 @@
+﻿<Window x:Class="POS.UI.Productos.FrmProducto"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POS.UI.Productos"
+        mc:Ignorable="d"
+        Title="frmProducto" Height="450" Width="800">
+    <Grid>
+        <Label Content="Nombre" HorizontalAlignment="Left" Height="24" Margin="18,42,0,0" VerticalAlignment="Top" Width="106"/>
+        <TextBox HorizontalAlignment="Left" Height="24" Margin="116,42,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="635" Name="txtNombre"/>
+        <Label Content="Código Barra" HorizontalAlignment="Left" Height="26" Margin="18,79,0,0" VerticalAlignment="Top" Width="86"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="116,79,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="256" Name="txtCodBarra"/>
+        <Label Content="Precio Costo" HorizontalAlignment="Left" Margin="18,121,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="116,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Name="txtPrecioCosto"/>
+        <Label Content="Precio Venta" HorizontalAlignment="Left" Margin="18,163,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="116,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Name="txtPrecioVenta"/>
+        <Label Content="Utilidad" HorizontalAlignment="Left" Margin="418,163,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="26" Margin="495,163,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Name="txtUtilidad"/>
+        <Label Content="Impuesto" HorizontalAlignment="Left" Height="28" Margin="18,207,0,0" VerticalAlignment="Top" Width="76"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="116,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Name="txtImpuesto"/>
+        <Label Content="Stock" HorizontalAlignment="Left" Margin="418,79,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="495,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Name="txtStock"/>
+        <Label Content="Existencias" HorizontalAlignment="Left" Margin="418,121,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="495,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Name="txtExistencias"/>
+        <Label Content="Descuento" HorizontalAlignment="Left" Margin="418,207,0,0" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="495,207,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="256" Name="txtDescuento"/>
+        <Button Content="Guardar" HorizontalAlignment="Left" Margin="535,355,0,0" VerticalAlignment="Top" Width="75" Name="btnGuardar" Click="BtnGuardar_Click"/>
+    </Grid>
+</Window>
